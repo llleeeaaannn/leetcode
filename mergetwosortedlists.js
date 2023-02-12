@@ -6,25 +6,27 @@
 //Output: [1,1,2,3,4,4]
 
 function ListNode(val, next) {
-  this.val = (val === undefined ? 0 : val);
-  this.next = (next === undefined ? null : next);
+	this.val = (val === undefined ? 0 : val)
+	this.next = (next === undefined ? null : next)
 }
 
 var mergeTwoLists = function(list1, list2) {
-  let current = ListNode(0, null);
-  const head = current;
-  while (list1.next || list2.next) {
-    if (list1.val >= list2.val) {
-      current.val = list1.val;
-      current.next = ListNode();
-      current = current.next;
-      list1 = list1.next;
-    } else {
-      current.val = list1.val;
-      current.next = ListNode();
-      current = current.next;
-      list1 = list1.next;
+    let current = new ListNode();
+    const head = current;
+    console.log('Here')
+    while (list1.next || list2.next) {
+    		console.log('While')
+        if (list1.val >= list2.val) {
+            current.val = list1.val;
+            current.next = new ListNode();
+            current = current.next;
+            list1 = list1.next;
+        } else {
+            current.val = list1.val;
+            current.next = new ListNode();
+            current = current.next;
+            list1 = list1.next;
+        }
     }
-  }
-  return head;
+    return head;
 };
