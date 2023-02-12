@@ -14,3 +14,5 @@ var twoSum = function(nums, target) {
     table[nums[i]] = i;
   }
 }
+
+// Beats 99.59% in runtime
