@@ -16,9 +16,10 @@ var checkLast = function(node1, node2) {
 }
 
 var mergeTwoLists = function(list1, list2) {
-    let current = new ListNode();
+    let current = new ListNode(null);
     const head = current;
     console.log('Here')
+    if (!list1 && !list2) return null;
     while (list1 || list2) {
     		if (list1 === null) {
         		console.log(list2.val);
