@@ -7,3 +7,14 @@
 // @param {number[]} nums
 // @param {number} target
 // @return {number[]}
+
+// Create a table, for each number find the difference between it and the target. If the difference is a property then return current index and property value. Otherwise add num as property to table with its index as its value.
+var twoSum = function(nums, target) {
+  let table = {};
+  for (let i = 0; i < nums.length; i++) {
+    let diff = target - nums[i];
+    if (table[diff] != undefined) return [i, table[diff]];
+
+    table[nums[i]] = i;
+  }
+}
