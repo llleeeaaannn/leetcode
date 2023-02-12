@@ -13,9 +13,7 @@ function ListNode(val, next) {
 var mergeTwoLists = function(list1, list2) {
     let current = new ListNode();
     const head = current;
-    console.log('Here')
     while (list1.next || list2.next) {
-    		console.log('While')
         if (list1.val >= list2.val) {
             current.val = list1.val;
             current.next = new ListNode();
