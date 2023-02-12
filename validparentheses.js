@@ -41,3 +41,7 @@ var isValid = function(s) {
   if (stack.length) return false;
   return true;
 };
+
+// Beats 90.8% in runtime
+// Beats 42.9% in memory
+// Remove first and last variables to improve memory but slow runtime
