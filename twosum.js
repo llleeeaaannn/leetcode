@@ -9,7 +9,7 @@ var twoSum = function(nums, target) {
   let table = {};
   for (let i = 0; i < nums.length; i++) {
     let diff = target - nums[i];
-    if (table[diff] != undefined) return [i, table[diff]];
+    if (table.hasOwnProperty(diff)) return [i, table[diff]];
 
     table[nums[i]] = i;
   }
