@@ -16,3 +16,5 @@ var twoSum = function(nums, target) {
 }
 
 // Beats 99.59% in runtime
+// Beats 25.5% in memory
+// Remove diff variable to improve memory but slow runtime
