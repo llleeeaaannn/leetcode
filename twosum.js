@@ -4,10 +4,6 @@
 // Output: [0,1]
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-// @param {number[]} nums
-// @param {number} target
-// @return {number[]}
-
 // Create a table, for each number find the difference between it and the target. If the difference is a property then return current index and property value. Otherwise add num as property to table with its index as its value.
 var twoSum = function(nums, target) {
   let table = {};
