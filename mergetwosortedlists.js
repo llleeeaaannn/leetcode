@@ -10,13 +10,6 @@ function ListNode(val, next) {
 	this.next = (next === undefined ? null : next)
 }
 
-var checkLast = function(node1, node2) {
-		if (node1 === null && node2 === null) return false;
-    return true;
-}
-
-if (list1 === null && list2 === null) return;
-
 var mergeTwoLists = function(list1, list2) {
     let current = new ListNode(null);
     const head = current;
@@ -35,10 +28,12 @@ var mergeTwoLists = function(list1, list2) {
             current.val = list2.val;
             list2 = list2.next;
         }
-        if (checkLast(list1, list2)) {
-          current.next = new ListNode();
-          current = current.next;
-        }
+        if (list1 === null && list2 === null) return head;
+        current.next = new ListNode();
+        current = current.next;
     }
     return head;
 };
+
+// Beats runtime 92.3%
+// Beats memory 88.6%
