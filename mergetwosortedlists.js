@@ -20,11 +20,9 @@ var checkLast = function(node1, node2) {
 var mergeTwoLists = function(list1, list2) {
     let current = new ListNode(null);
     const head = current;
-    console.log('Here')
     if (!list1 && !list2) return null;
     while (list1 || list2) {
     		if (list1 === null) {
-        		console.log(list2.val);
             current.val = list2.val;
             list2 = list2.next;
             if (checkLast(list1, list2)) {
@@ -32,7 +30,6 @@ var mergeTwoLists = function(list1, list2) {
             	current = current.next;
             }
         } else if (list2 === null) {
-        		console.log(list1.val);
             current.val = list1.val;
             list1 = list1.next;
             if (checkLast(list1, list2)) {
@@ -40,7 +37,6 @@ var mergeTwoLists = function(list1, list2) {
             	current = current.next;
             }
         } else if (list1.val <= list2.val) {
-        		console.log(list1.val);
             current.val = list1.val;
             list1 = list1.next;
             if (checkLast(list1, list2)) {
@@ -48,7 +44,6 @@ var mergeTwoLists = function(list1, list2) {
             	current = current.next;
             }
         } else {
-        		console.log(list2.val);
             current.val = list2.val;
             list2 = list2.next;
             if (checkLast(list1, list2)) {
