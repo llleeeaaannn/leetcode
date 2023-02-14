@@ -8,7 +8,6 @@
 // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 var maxProfit = function(prices) {
-    let max;
     let hash = {};
     for (let i = 0; i < prices.length; i++) {
         let x = i + 1;
@@ -17,6 +16,7 @@ var maxProfit = function(prices) {
             if (prices[x] - prices[i] > hash[i]) hash[i] = prices[x] - prices[i];
         }
     }
-    let array = Object.values(obj);
-    let max = Math.max(...arr);
+    let array = Object.values(hash);
+    let max = Math.max(...array);
+    return max;
 }
