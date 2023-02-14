@@ -17,5 +17,6 @@ var maxProfit = function(prices) {
             if (prices[x] - prices[i] > hash[i]) hash[i] = prices[x] - prices[i];
         }
     }
-    console.log(hash);
+    let array = Object.values(obj);
+    let max = Math.max(...arr);
 }
