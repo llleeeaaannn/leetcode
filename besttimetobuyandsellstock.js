@@ -22,5 +22,3 @@ const maxProfit = (prices) => {
   }
   return max_profit;
 };
-
-// Added correct solution
