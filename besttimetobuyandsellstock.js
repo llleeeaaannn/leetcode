@@ -20,12 +20,20 @@
 //     return profit;
 // }
 
-var maxProfit = function(prices) {
-    let profit = 0;
-    let min = Math.max(...prices);
-    let max = Math.max(...prices);
-    profit = max - min;
-    return profit;
-}
+const maxProfit = (prices) => {
+  let left = 0;
+  let right = 1;
+  let max_profit = 0;
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left];
+      max_profit = Math.max(max_profit, profit);
+    } else {
+      left = right;
+    }
+    right++;
+  }
+  return max_profit;
+};
 
-// Still fails with large datasets
+// Added correct solution
