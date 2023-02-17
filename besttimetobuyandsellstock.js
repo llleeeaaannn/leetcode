@@ -7,19 +7,6 @@
 // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
-// var maxProfit = function(prices) {
-//     let profit = 0;
-//     for (let i = 0; i < prices.length; i++) {
-//         let x = i + 1;
-//         let double = prices.slice(x);
-//         let max = Math.max(...double);
-//         if (max - prices[i] > profit) {
-//         	profit = max - prices[i];
-//         }
-//     }
-//     return profit;
-// }
-
 const maxProfit = (prices) => {
   let left = 0;
   let right = 1;
