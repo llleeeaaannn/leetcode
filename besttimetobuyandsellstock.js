@@ -22,3 +22,6 @@ const maxProfit = (prices) => {
   }
   return max_profit;
 };
+
+// Runtime beats top 57%
+// Memory beats top 42%
