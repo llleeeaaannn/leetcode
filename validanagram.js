@@ -8,16 +8,26 @@
 // Input: s = "rat", t = "car"
 // Output: false
 
+// var isAnagram = function(s, t) {
+//     let x = s.split("");
+//     let y = t.split("");
+//     if (x.length !== y.length) return false;
+//     for (let i = 0; i < x.length; i++) {
+//         if (y.includes(x[i])) {
+//             y.splice(y.indexOf(x[i]), 1);
+//         } else {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
+
 var isAnagram = function(s, t) {
-    let x = s.split("");
-    let y = t.split("");
+    let x = s.split("").sort();
+    let y = t.split("").sort();
     if (x.length !== y.length) return false;
     for (let i = 0; i < x.length; i++) {
-        if (y.includes(x[i])) {
-            y.splice(y.indexOf(x[i]), 1);
-        } else {
-            return false;
-        }
+        if (x[i] !== y[i]) return false;
     }
     return true;
 };
