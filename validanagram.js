@@ -9,7 +9,6 @@
 // Output: false
 
 var isAnagram = function(s, t) {
-    let answer = true;
     let x = s.split("");
     let y = t.split("");
     if (x.length !== y.length) return false;
