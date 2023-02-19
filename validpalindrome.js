@@ -19,3 +19,6 @@ var isPalindrome = function(s) {
   if (start === end) return true;
   return false;
 };
+
+// Beats 51.91% of runtime
+// Beats 61.32% of memory
