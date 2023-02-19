@@ -20,5 +20,5 @@ var isPalindrome = function(s) {
   return false;
 };
 
-// Beats 51.91% of runtime
+// Beats 81.91% of runtime
 // Beats 61.32% of memory
