@@ -7,3 +7,18 @@
 
 // Input: s = "rat", t = "car"
 // Output: false
+
+var isAnagram = function(s, t) {
+    let answer = true;
+    let x = s.split("");
+    let y = t.split("");
+    if (x.length !== y.length) return false;
+    for (let i = 0; i < x.length; i++) {
+        if (y.includes(x[i])) {
+            y.splice(y.indexOf(x[i]), 1);
+        } else {
+            return false;
+        }
+    }
+    return true;
+};
