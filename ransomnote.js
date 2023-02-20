@@ -8,6 +8,7 @@
 // Input: ransomNote = "aa", magazine = "ab"
 // Output: false
 
+// Easy to read solution
 var canConstruct = function(ransomNote, magazine) {
     let mag = magazine.split('');
     for (let i = 0; i < ransomNote.length; i++) {
@@ -15,6 +16,14 @@ var canConstruct = function(ransomNote, magazine) {
         mag.splice(mag.indexOf(ransomNote[i]), 1);
     }
     return true;
+};
+
+// Concise Solution 
+var canConstruct = function(ransomNote, magazine) {
+    for (let letter of magazine) {
+      ransomNote = ransomNote.replace(letter, '');
+    }
+    return !ransomNote;
 };
 
 // Runtime beats 84.9%
