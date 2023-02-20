@@ -7,3 +7,12 @@
 
 // Input: ransomNote = "aa", magazine = "ab"
 // Output: false
+
+var canConstruct = function(ransomNote, magazine) {
+    let mag = magazine.split('');
+    for (let i = 0; i < ransomNote.length; i++) {
+        if (!mag.includes(ransomNote[i])) return false;
+        mag.splice(mag.indexOf(ransomNote[i]), 1);
+    }
+    return true;
+};
