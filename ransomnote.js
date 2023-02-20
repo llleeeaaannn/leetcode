@@ -16,3 +16,6 @@ var canConstruct = function(ransomNote, magazine) {
     }
     return true;
 };
+
+// Runtime beats 84.9%
+// Memory beats 44.9%
