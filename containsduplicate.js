@@ -7,5 +7,9 @@
 // Output: false
 
 var containsDuplicate = function(nums) {
-
+  let unique = [...new Set(nums)];
+  return !(unique.length === nums.length);
 };
+
+// Runtime beats 83.8%
+// Memory beats 13.1%
