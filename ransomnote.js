@@ -17,6 +17,8 @@ var canConstruct = function(ransomNote, magazine) {
     }
     return true;
 };
+// Runtime beats 84.9%
+// Memory beats 44.9%
 
 // Concise Solution (For each letter in magazine, remove it from ransomNote, if ransomNote is empty at the end the all letters were in magazine and we can return true (!false) or if ransomNote isnt an empty string we return false)
 var canConstruct = function(ransomNote, magazine) {
@@ -25,6 +27,5 @@ var canConstruct = function(ransomNote, magazine) {
     }
     return !ransomNote;
 };
-
-// Runtime beats 84.9%
-// Memory beats 44.9%
+// Runtime beats 35.6%
+// Memory beats 51.7%
