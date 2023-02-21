@@ -8,7 +8,7 @@
 // Input: ransomNote = "aa", magazine = "ab"
 // Output: false
 
-// Easy to read solution
+// Easy to read solution (For each letter in ransomNote, if its not in magazine return false. If it is, remove it from magazine and continue, if we finish the loop then every letter in ransomNote is in magazine and we return true)
 var canConstruct = function(ransomNote, magazine) {
     let mag = magazine.split('');
     for (let i = 0; i < ransomNote.length; i++) {
@@ -18,7 +18,7 @@ var canConstruct = function(ransomNote, magazine) {
     return true;
 };
 
-// Concise Solution 
+// Concise Solution (For each letter in magazine, remove it from ransomNote, if ransomNote is empty at the end the all letters were in magazine and we can return true (!false) or if ransomNote isnt an empty string we return false)
 var canConstruct = function(ransomNote, magazine) {
     for (let letter of magazine) {
       ransomNote = ransomNote.replace(letter, '');
