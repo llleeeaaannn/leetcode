@@ -16,6 +16,8 @@ var isPalindrome = function(x) {
   let half = l / 2;
   let start = s.slice(0, Math.floor(half));
   let end = s.slice(Math.ceil(half)).reverse();
-  if (start === end) return true;
-  return false;
+  return start.toString() === end.toString();
 }
+
+// Runtime beats 14.3%
+// Memory beats 21.4%
