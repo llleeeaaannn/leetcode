@@ -14,8 +14,8 @@ var isPalindrome = function(x) {
   let s = x.toString().split('');
   let l = s.length;
   let half = l / 2;
-  let start = s.splice(0, Math.floor(half));
-  let end = s.reverse();
-  if (start === end) return false;
-  return true;
+  let start = s.slice(0, Math.floor(half));
+  let end = s.slice(Math.ceil(half)).reverse();
+  if (start === end) return true;
+  return false;
 }
