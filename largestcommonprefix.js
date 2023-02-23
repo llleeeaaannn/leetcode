@@ -8,3 +8,15 @@
 // Input: strs = ["dog","racecar","car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
+
+var longestCommonPrefix = function(strs) {
+  let match = 0;
+  let start = strs[0];
+  for (let i = 0; i < start.length; i++) {
+    for (let j = 0; j < strs.length; j++) {
+      if (start[i] !== strs[j][i]) return;
+    }
+    match++;
+  }
+  return start.slice(0, match)
+};
