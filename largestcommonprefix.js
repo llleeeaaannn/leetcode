@@ -20,3 +20,6 @@ var longestCommonPrefix = function(strs) {
   }
   return start.slice(0, match);
 };
+
+// Beats 99.55% runtime
+// Beats 47.38% memory
