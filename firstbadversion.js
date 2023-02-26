@@ -33,3 +33,6 @@ var solution = function(isBadVersion) {
     return min;
   };
 };
+
+// Beats 78.4% runtime
+// Beats 10.2% runtime
