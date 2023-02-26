@@ -18,6 +18,18 @@
 
 var solution = function(isBadVersion) {
   return function(n) {
-    
+    let highestGood = 0;
+    let lowestBad = n;
+    let answer = false;
+    while (!answer) {
+      let mid = Math.floor((lowestBad - highestGood) / 2 + highestGood);
+      if (isBadVersion(mid)) {
+        lowestBad = mid;
+        if (!isBadVersion(mid - 1)) answer = true;
+      } else {
+        highestGood = mid;
+      }
+    }
+    return lowestBad;
   }
 }
