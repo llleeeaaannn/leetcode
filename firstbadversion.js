@@ -22,7 +22,7 @@ var solution = function(isBadVersion) {
     let lowestBad = n;
     let answer = false;
     while (!answer) {
-      let mid = Math.floor((lowestBad - highestGood) / 2 + highestGood);
+      let mid = (lowestBad - highestGood) / 2 + highestGood;
       if (isBadVersion(mid)) {
         lowestBad = mid;
         if (!isBadVersion(mid - 1)) answer = true;
