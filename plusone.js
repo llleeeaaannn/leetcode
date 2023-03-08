@@ -16,4 +16,9 @@
 
 var plusOne = function(digits) {
   let reversed = digits.reverse();
+  reversed[0] = reversed[0] + 1;
+  let fixed = reversed.reverse();
+  let str = fixed.toString();
+  let num = Number(str);
+  return num;
 };
