@@ -15,9 +15,12 @@
 // Thus, the result should be [1,0].
 
 var plusOne = function(digits) {
-    const fromArray = digits.join(''); // get Digits out of Array
-    const toInt = BigInt(fromArray) ; //Dont use parseInt, use BigInt instead :)
-    const addOne = toInt + 1n; // add one!
-    const result =  Array.from(String(addOne), Number); // return digits to array
-    return result  
+  const fromArray = digits.join(''); // get Digits out of Array
+  const toInt = BigInt(fromArray) ; //Dont use parseInt, use BigInt instead
+  const addOne = toInt + 1n; // add one!
+  const result =  Array.from(String(addOne), Number); // return digits to array
+  return result
 };
+
+// Beats 82.3% runtime
+// Beats 76.5% memory
