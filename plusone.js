@@ -15,10 +15,9 @@
 // Thus, the result should be [1,0].
 
 var plusOne = function(digits) {
-  let reversed = digits.reverse();
-  reversed[0] = reversed[0] + 1;
-  let fixed = reversed.reverse();
-  let str = fixed.toString();
-  let num = Number(str);
-  return num;
+    const fromArray = digits.join(''); // get Digits out of Array
+    const toInt = BigInt(fromArray) ; //Dont use parseInt, use BigInt instead :)
+    const addOne = toInt + 1n; // add one!
+    const result =  Array.from(String(addOne), Number); // return digits to array
+    return result  
 };
